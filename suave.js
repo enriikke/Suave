@@ -16,7 +16,7 @@
 		}, options);
 
 
-
+		// TODO: Need to filterout the target
 		var getTarget = function(anchor) {
 
 			if(	anchor.hash.replace(/#/, '') &&
@@ -29,13 +29,14 @@
 		};
 
 
-
+		// TODO: test the location
 		var setHash = function(target) {
 
 			location.hash = target;
 		};
 
 
+		// TODO: allow for horizontal scrolling
 		return this.each(function() {
 			var target = getTarget(this);
 			if(!target) return true;
