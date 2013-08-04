@@ -20,17 +20,19 @@
 	
 	$.fn.suave = function(options) {
 
-		
-
-
-		// Settings 
+		// Customizable settings for Suave
 		var settings = $.extend({
 
-			speed: 			400,
-			displayHash: 	false
+			speed: 		400, // How fast should the animation be
+			displayHash: 	false // Display the link hash in the URL bar
 
 		}, options);
 
+
+
+		/****************************************************************************************************
+        		NICE UTIL FUNCTIONS FOR VAPE TO WORK 
+        	*****************************************************************************************************/
 
 		// TODO: Need to filterout the target
 		var getTarget = function(anchor) {
@@ -52,7 +54,11 @@
 		};
 
 
-		// TODO: allow for horizontal scrolling
+
+		/****************************************************************************************************
+                        THE MAGIC HAPPENS HERE 
+                *****************************************************************************************************/
+                
 		return this.each(function() {
 			var target = getTarget(this);
 			if(!target) return true;
